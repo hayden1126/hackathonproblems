@@ -15,8 +15,8 @@ This function takes one input:
 - Round the overall slope grade to two decimal places.
 
 #### Constraints
-- The `topography` arrays will contain at least 50 elements and at most 100000 elements.
-- All values in `topography` will be positive integers from 0 to 3000.
+- The `topography` arrays will contain at least 50 elements and at most 1000 elements.
+- All values in `topography` will be positive integers from 0 to 3300.
 
 ## Sample
 
