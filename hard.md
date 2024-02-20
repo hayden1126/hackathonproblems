@@ -61,6 +61,7 @@ snowfall = [0.5, 0.7, 0.4, 0.6, 0.3]
 threshold = 0.5 -->
 
 # Sample function call
+```python
 print(main(topography, snowfall, threshold))
 ```
 
