@@ -1,4 +1,4 @@
-### Coding Challenge: Ski Slope Difficulty Assessment
+### Ski Slope Difficulty Assessment
 
 #### Problem Statement
 Write a function that evaluates the difficulty of ski slopes by accounting for snowfall, snow slippage, and identifying the most challenging 50-meter segment. The difficulty of a slope is determined from the 50-meter segment with the largest average steepness.
