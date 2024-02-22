@@ -1,22 +1,26 @@
-import random
 
-current_elevation = random.randint(2200, 3200)
-adjusted_input = []
+def generate_input():
+    import random
 
-length = random.randint(50, 1000)
+    current_elevation = random.randint(2200, 3200)
+    adjusted_input = []
 
-for _ in range(length):
-    # Introducing a bit of a variation to sometimes go up, but mostly go down
-    direction = random.choice([1, -1, -1, -1, -1])  # More likely to go down
-    distance = [random.randint(0, 5), random.randint(5, 7), random.randint(7, 20)][random.choice([0, 0, 0, 0, 1, 1, 2])]
-    delta = distance * direction
-    
-    # Ensuring the new point is within the elevation limits
-    new_elevation = max(0, min(3300, current_elevation + delta))
-    adjusted_input.append(new_elevation)
-    current_elevation = new_elevation
+    length = random.randint(50, 1000)
 
-print(adjusted_input)
+    for _ in range(length):
+        # Introducing a bit of a variation to sometimes go up, but mostly go down
+        direction = random.choice([1, -1, -1, -1, -1])  # More likely to go down
+        distance = [random.randint(0, 5), random.randint(5, 7), random.randint(7, 20)][random.choice([0, 0, 0, 0, 1, 1, 2])]
+        delta = distance * direction
+        
+        # Ensuring the new point is within the elevation limits
+        new_elevation = max(0, min(3300, current_elevation + delta))
+        adjusted_input.append(new_elevation)
+        current_elevation = new_elevation
+
+    return adjusted_input
+
+print(topography := generate_input())
 
 
 def ski_run_difficulty(topography):
@@ -51,4 +55,4 @@ def ski_run_difficulty(topography):
     # Return difficulty rating rounded to three decimal places
     return round(difficulty_rating, 2)
 
-print(ski_run_difficulty(adjusted_input))
+print(ski_run_difficulty(topography))
