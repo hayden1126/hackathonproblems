@@ -29,7 +29,7 @@ def ski_run_difficulty(topography):
     
     # Iterate through the array to find the segment with the highest average steepness
     for i in range(len(steepness) - 48):  # Ensure the segment is 50 meters long
-        segment = steepness[i:i+50]
+        segment = steepness[i:i+49]
         avg_steepness = sum(segment) / 49  # Average steepness of the segment
         trough_count = 0
         
